@@ -8,8 +8,6 @@ user_input = input("Введите, пожалуйста, номер месяц�
 month = int(user_input)
 
 print('Вы ввели', month)
-
-
 if 0 < month < 13:
 
     if month in (1, 3, 5, 7, 8, 10, 12):
