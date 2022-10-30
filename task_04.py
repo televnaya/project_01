@@ -17,3 +17,10 @@ my_favorite_songs = [
     ['Nowhere to Run', 2.58],
     ['In This World', 4.02],
 ]
+import random
+songs_lenght = [3.03, 4.02, 3.40, 3.03, 5.28, 4.15, 4.04, 2.58, 4.02]
+
+# Случайные три значения звучания песен из списка при помощи функции random.sample()
+random_lenght = random.sample (songs_lenght, 3)
+lengths_counted = sum(random_lenght)
+print(lengths_counted)
