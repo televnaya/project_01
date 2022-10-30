@@ -16,3 +16,15 @@ if 0 < month < 13:
         print('в этом месяце', 28, 'дней')
 else:
     print('Вы ввели некорректное число. Введите число от 1 до 12.')
+    
+# Отлично
+# можно и так
+# Решение 2
+import calendar as cl  # используем модуль для получения функции
+
+year_input = input("Введите год: ")
+month_input = input("Введите номер месяца: ")
+
+year = int(year_input)
+month_ = int(month_input)
+print(cl.monthrange(year, month_))
