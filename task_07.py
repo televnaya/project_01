@@ -35,3 +35,24 @@ sales = {
 #         подсчет количества товара
 #         подсчет стоимости товара
 #     вывод на консоль количества и стоимости товара на складе
+
+
+codes = dict((v, k) for k, v in titles.items())
+
+
+def get_amount(sales_data):
+    total_quantity = 0
+    total_price = 0
+    for elem in sales_data:
+        quantity = elem.get('quantity', 0)
+        total_quantity += quantity
+        total_price += quantity * elem.get('price', 0)
+    return {'total_quantity': total_quantity, 'total_price': total_price}
+
+
+def result(data): # входное значение sales
+    return {k: get_amount(v) for k, v in sales.items()}
+
+
+for k, v in result(sales).items():
+    print(f"{codes.get(k)} - {v.get('total_quantity')} шт, стоимость {v.get('total_price')} руб")
