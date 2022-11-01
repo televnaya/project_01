@@ -5,7 +5,7 @@
 # Три песни звучат ХХХ минут
 # Для того, чтобы задавать случайные значения, используйсте модуль random
 # import random 
-
+import random
 my_favorite_songs = [
     ['Waste a Moment', 3.03],
     ['New Salvation', 4.02],
@@ -17,10 +17,13 @@ my_favorite_songs = [
     ['Nowhere to Run', 2.58],
     ['In This World', 4.02],
 ]
-import random
-songs_lenght = [3.03, 4.02, 3.40, 3.03, 5.28, 4.15, 4.04, 2.58, 4.02]
 
 # Случайные три значения звучания песен из списка при помощи функции random.sample()
-random_lenght = random.sample (songs_lenght, 3)
-lengths_counted = sum(random_lenght)
-print(lengths_counted)
+
+dlina = len(my_favorite_songs)-1
+print(dlina)
+a = random.randint (0, dlina)
+print(a)
+b = random.randint (0, dlina)
+c = random.randint (0, dlina)
+print (f"Три песни звучат {my_favorite_songs[a][1] + my_favorite_songs[b][1] + my_favorite_songs[c][1]} минут")
